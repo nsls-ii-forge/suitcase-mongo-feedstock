@@ -1,0 +1,41 @@
+{% set name = "suitcase-mongo" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "77fd633e00ae7aa8292e6d0e2ad5e84ff2f9a4a5568178a0865a0033166de63b" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+
+requirements:
+  host:
+    - python
+    - pip
+  run:
+    - python
+    - event-model >=1.8.0
+    - pymongo
+
+test:
+  imports:
+    - suitcase.mongo_embedded
+    - suitcase.mongo_embedded.tests
+    - suitcase.mongo_normalized
+    - suitcase.mongo_normalized.tests
+
+about:
+  home: https://blueskyproject.io/suitcase
+  license: BSD (3-clause)
+  license_family: BSD
+  license_file: LICENSE
+  summary: A suitcase subpackage for inserting bluesky documents into MongoDB
+  doc_url: https://blueskyproject.io/suitcase
+  dev_url: https://github.com/bluesky/suitcase-mongo
