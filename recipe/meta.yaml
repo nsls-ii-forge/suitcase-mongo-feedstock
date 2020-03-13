@@ -1,6 +1,6 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.1.1" %}
-{% set sha256 = "e9bbdb3eb50a8cc5acdc03d3187dc837346da3fd3332ce448e9a70454fbc6f79" %}
+{% set version = "0.2.0" %}
+{% set sha256 = "b48d6721b565c40e69202d97aa651481842dde0bc1f6476f33b4c422dfcd5aa5" %}
 
 package:
   name: {{ name|lower }}
