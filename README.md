@@ -5,11 +5,13 @@ Home: https://blueskyproject.io/suitcase
 
 Package license: BSD (3-clause)
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/suitcase-mongo-feedstock/blob/master/LICENSE.txt)
 
 Summary: A suitcase subpackage for inserting bluesky documents into MongoDB
 
+Development: https://github.com/bluesky/suitcase-mongo
 
+Documentation: https://blueskyproject.io/suitcase
 
 Current build status
 ====================
