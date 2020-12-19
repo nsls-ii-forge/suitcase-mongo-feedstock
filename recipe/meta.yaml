@@ -1,6 +1,6 @@
 {% set name = "suitcase-mongo" %}
-{% set version = "0.2.0" %}
-{% set sha256 = "b48d6721b565c40e69202d97aa651481842dde0bc1f6476f33b4c422dfcd5aa5" %}
+{% set version = "0.3.0" %}
+{% set sha256 = "e8648a18c165da0957a96cb16e6a964cf8b4e5bb43fd42b52487e2f8edcb154e" %}
 
 package:
   name: {{ name|lower }}
@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
 
 requirements:
   host:
